@@ -51,8 +51,8 @@
 #include <dt-bindings/interrupt-controller/irq.h>
 
 / {
-	model = "NextThing C.H.I.P.";
-	compatible = "nextthing,chip", "allwinner,sun5i-r8";
+	model = "Source Parts Kettlepop";
+	compatible = "sourceparts,kettlepop", "nextthing,chip-pro", "nextthing,gr8";
 
 	aliases {
 		i2c0 = &i2c0;
@@ -207,12 +207,5 @@
 };
 
 &usbphy {
-	pinctrl-names = "default";
-	pinctrl-0 = <&chip_id_det_pin>;
 	status = "okay";
-
-	usb0_id_det-gpio = <&pio 6 2 GPIO_ACTIVE_HIGH>; /* PG2 */
-	usb0_vbus_power-supply = <&usb_power_supply>;
-	usb0_vbus-supply = <&reg_usb0_vbus>;
-	usb1_vbus-supply = <&reg_vcc5v0>;
 };
