@@ -137,12 +137,12 @@
 
 &pio {
 	mmc2_8bit_pins: mmc2-8bit-pins {
-		pins = "PC6", "PC7", "PC8", "PC9",
+		allwinner,pins = "PC6", "PC7", "PC8", "PC9",
 		       "PC10", "PC11", "PC12", "PC13",
 		       "PC14", "PC15";
-		function = "mmc2";
-		drive-strength = <30>;
-		bias-pull-up;
+		allwinner,function = "mmc2";
+		allwinner,drive = <SUN4I_PINCTRL_30_MA>;
+		allwinner,pull = <SUN4I_PINCTRL_PULL_UP>;
 	};
 
 	chip_w1_pin: chip_w1_pin@0 {
